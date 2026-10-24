@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -10,8 +9,13 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private Sprite moving;
     [SerializeField] private float forceAmount = 10.0f;
 
+
+
+ 
+
+
     void Update()
-    {
+    { 
         if (Input.GetKey(KeyCode.A))
         {
             playerPhysics.AddForce(Vector2.left * forceAmount);
@@ -28,6 +32,7 @@ public class playerMovement : MonoBehaviour
             spriteRenderer.sprite = moving;
             var emission = walkDust.emission;
             emission.enabled = true;
+            walkDust.Play();
         }
         else
         {

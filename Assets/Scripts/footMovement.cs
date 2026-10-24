@@ -1,7 +1,6 @@
 using MoreMountains.Feedbacks;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem.Processors;
 
 public class footMovement : MonoBehaviour
 {

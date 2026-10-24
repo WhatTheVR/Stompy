@@ -187,7 +187,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5029810485254363011}
   idle: {fileID: -1416604817420825889, guid: 5cd0616665aff0a409d9921f149a0880, type: 3}
   moving: {fileID: 516345126904792410, guid: 5c40f935aed7c9f419a69ef4c0d8c5d3, type: 3}
-  forceAmount: 2
+  forceAmount: 25
 --- !u!114 &1587637135985794984
 MonoBehaviour:
   m_ObjectHideFlags: 0

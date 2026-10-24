@@ -1,12 +1,7 @@
 using MoreMountains.Feedbacks;
-using NUnit.Framework.Internal;
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class footSpawnerController : MonoBehaviour
 {

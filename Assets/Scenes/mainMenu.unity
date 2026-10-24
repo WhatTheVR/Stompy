@@ -2343,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Foot
       objectReference: {fileID: 0}
+    - target: {fileID: 312896016136270663, guid: 1b445de70d78cfb4db7a8d2000dfcd4f, type: 3}
+      propertyPath: playerDeath
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 830738963877310453, guid: 1b445de70d78cfb4db7a8d2000dfcd4f, type: 3}
       propertyPath: m_BodyType
       value: 0

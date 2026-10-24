@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -15,6 +14,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

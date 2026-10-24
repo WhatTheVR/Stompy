@@ -8,11 +8,9 @@ public class valueConnector : MonoBehaviour
 
     void Start()
     {
-        // Make sure the sliders match the currently saved volume levels
         if (musicSlider != null)
         {
             musicSlider.value = PlayerPrefs.GetFloat("SavedMusicVolume", 0.75f);
-            // Link the slider event to the persistent AudioManager instance
             musicSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
         }
 
