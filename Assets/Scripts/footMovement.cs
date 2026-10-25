@@ -8,11 +8,14 @@ public class footMovement : MonoBehaviour
     [SerializeField] private playerDeath playerDeath;
     [SerializeField] private shadowDestroy shadowDestroy;
     [SerializeField] private footSpawnerController footSpawner;
+    [SerializeField] private footSpawnerControllerEndless footSpawner2;
     [SerializeField] private Collider2D deathZone;
     [SerializeField] private MMF_Player cameraShake;
     [SerializeField] private AudioSource fallingOne;
     [SerializeField] private AudioSource fallingTwo;
     [SerializeField] private AudioSource deathSound;
+    private bool isEndlessMode;
+
     private Rigidbody2D footPhysics;
 
     [HideInInspector] public shadowDestroy mySpecificShadow;
@@ -26,6 +29,16 @@ public class footMovement : MonoBehaviour
         footPhysics = GetComponent<Rigidbody2D>();
         playerDeath = FindAnyObjectByType<playerDeath>();
         footSpawner = FindAnyObjectByType<footSpawnerController>();
+        footSpawner2 = FindAnyObjectByType<footSpawnerControllerEndless>();
+
+        if (footSpawner2 != null)
+        {
+            isEndlessMode = true;
+        }
+        else if (footSpawner != null)
+        {
+            isEndlessMode = false;
+        }
 
         if (Random.value > 0.5f)
         {
@@ -55,7 +68,14 @@ public class footMovement : MonoBehaviour
             fallingTwo.Stop();
             playerDeath.KillPlayer();
             deathSound.Play();
-            footSpawner.stopSpawning();
+            if (isEndlessMode == false)
+            {
+                footSpawner.stopSpawning();
+            }
+            else
+            {
+                footSpawner2.stopSpawning();
+            }
         }
     }
 

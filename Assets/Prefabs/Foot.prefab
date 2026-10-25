@@ -116,6 +116,7 @@ MonoBehaviour:
   playerDeath: {fileID: 0}
   shadowDestroy: {fileID: 0}
   footSpawner: {fileID: 0}
+  footSpawner2: {fileID: 0}
   deathZone: {fileID: 1413961435913931408}
   cameraShake: {fileID: -462046493543345682}
   fallingOne: {fileID: 1525720376209387441}
@@ -819,7 +820,7 @@ MonoBehaviour:
           RepeatForever: 0
           DelayBetweenRepeats: 1
           IgnoreFeedbackDurationForRepeats: 0
-          PlayCount: 0
+          PlayCount: 4
           LimitPlayCount: 0
           MaxPlayCount: 3
           SetPlayCountToZeroOnReset: 0

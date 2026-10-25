@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 public class menuMangager : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D foot;
-    [SerializeField] private string targetUrl = "https://google.com";
+    [SerializeField] private string targetUrl = "https://whatthevr.itch.io/stompy";
     public void startPressed()
     {
         StartCoroutine(WaitAndLoad((float)1.5));
+    }
+    public void startEndlessPressed()
+    {
+        StartCoroutine(WaitAndLoadEndless((float)1.5));
     }
     public void settingsPressed()
     {
@@ -21,6 +25,10 @@ public class menuMangager : MonoBehaviour
     public void retryPressed()
     {
         SceneManager.LoadScene("gameplay");
+    }
+    public void retryEndlessPressed()
+    {
+        SceneManager.LoadScene("gameplayEndless");
     }
     public void mainMenuPressed()
     {
@@ -41,6 +49,13 @@ public class menuMangager : MonoBehaviour
         
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene("gameplay");
+    }
+    IEnumerator WaitAndLoadEndless(float time)
+    { 
+        foot.WakeUp();
+        
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("gameplayEndless");
     }
 
 }
